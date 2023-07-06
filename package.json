@@ -1,6 +1,6 @@
 {
-  "name": "crud-component",
-  "version": "1.0.0",
+  "name": "@atmoutsourcing/crud-component",
+  "version": "0.0.1",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -10,9 +10,13 @@
   "license": "ISC",
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "tsup": "^7.1.0",
