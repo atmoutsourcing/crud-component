@@ -1,7 +1,7 @@
 export function CrudComponent() {
   return (
     <div>
-      crud component
+      crud component 2
     </div>
   )
 }
