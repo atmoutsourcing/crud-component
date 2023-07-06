@@ -2,8 +2,24 @@
   "name": "crud-component",
   "version": "1.0.0",
   "description": "",
-  "main": "index.tsx",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
